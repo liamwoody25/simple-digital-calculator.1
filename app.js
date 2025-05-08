@@ -1,22 +1,20 @@
 const display = document.getElementById('display')
-const numButtons = document.querySelectorAll('.number-btns')
+const numButtons = document.querySelectorAll('.number-key')
 
 
-function displayOutput(){
+function displayOutput(value){
   const displayInput = document.getElementById('display');
-  display.value += button.textContent;
+ 
 
 }
 
 
-function numInput(){
-  numButtons.addEventListener('click', function(){
-    for( const button of numButtons) {
-    
-    }
-   });
+function numInput() {
+  for(const button of numButtons) {
+    button.addEventListener('click', function(){
+      display.value += button.textContent;
+    })
   }
+}
 
-
-displayOutput()
-
+numInput()
